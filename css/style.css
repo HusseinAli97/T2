@@ -4,6 +4,7 @@
     --sub-color:#33d1cc;
     --red-color:#ff3150;
     --yellow-color:#ffc400;
+    --sec-color:#33d1cc15;
 }
 body {
     font-family: 'Roboto', sans-serif;
@@ -17,6 +18,20 @@ body {
     background-color: var(--sub-color);
 }
 
+.underline::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 2px;
+    bottom: -20px;
+    left: 50%;
+    background-color: var(--sub-color);
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
 
 /* *!SECTION - NAV - BAR  */
 .navbar {
@@ -54,3 +69,137 @@ body {
     min-height: calc( 100vh - 72px);
 
 }
+
+/* *!SECTION - FEATURES  */
+.features .ico-holder {
+    height: 200px;
+    
+}
+.features .ico-holder i {
+    left: 50%;
+    transform: translatex(-50%);
+    -webkit-transform: translatex(-50%);
+    -moz-transform: translatex(-50%);
+    -ms-transform: translatex(-50%);
+    -o-transform: translatex(-50%);
+}
+.features .ico-holder .number {
+    font-size: 12rem;
+    color: var(--sub-color);
+    opacity: .1;
+}
+.features .ico-holder .icon {
+    color: var(--sub-color);
+}
+.features h4 {
+    color: var(--yellow-color);
+}
+/* *!SECTION - WORK  */
+.work {
+    background-color: var(--sec-color);
+}
+
+.work ul .active {
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+
+}
+.work ul li {
+    padding: .5rem 1rem;
+    cursor: pointer;
+
+}
+.work ul  li:not(.active):hover {
+    color: var(--red-color);
+}
+.work .box {
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+}
+.work .box::before {
+    content: attr(data-work);
+    position: absolute;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    background-color: #2388858e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+    transition:  .5s;
+    -webkit-transition:  .5s;
+    -moz-transition:  .5s;
+    -ms-transition:  .5s;
+    -o-transition:  .5s;
+    transform: translateX(calc(-100% - 5px));
+    -webkit-transform: translateX(calc(-100% - 5px));
+    -moz-transform: translateX(calc(-100% - 5px));
+    -ms-transform: translateX(calc(-100% - 5px));
+    -o-transform: translateX(calc(-100% - 5px));
+}
+.work .box:hover:before {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+}
+/* *!SECTION - TEAM  */
+.team {
+    background-color: var(--sec-color);
+}
+.yellow-color {
+    color: var(--yellow-color);
+}
+.team .box h4 {
+    background-color: var(--sub-color);
+}
+/* *!SECTION - PROJECTS  */
+.project {
+    background-color: var(--dark-color);
+}
+/* *!SECTION - SUBS  */
+.subs {
+    background-color: var(--yellow-color);
+}
+.subs input[type="email"] {
+    border: none;
+    border-bottom: 1px solid white;
+}
+.subs input[type="email"]:focus {
+    outline: none;
+}
+
+.subs form ::placeholder {
+    color: white;
+}
+
+.subs button[type="submit"] {
+    background-color: var(--dark-color);
+    color: var(--yellow-color);
+}
+
+/* *!SECTION - FOOTER  */
+.footer {
+    background-color: var(--dark-color);
+}
+.footer .copy > span {
+    color: var(--sub-color);
+}
+.footer .copy div span {
+    color: var(--yellow-color);
+}
+
+/* .footer .contact ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+}
+.footer .contact ul li:has(.face) {
+    background-color: blue;
+} */
